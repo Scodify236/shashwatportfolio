@@ -49,17 +49,23 @@
             margin: 0 auto 1rem;
             background: var(--surface);
             border-radius: 24px;
-            padding: 1rem;
             border: 2px solid var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensures image doesn't overflow */
         }
 
-        .logo i {
-            font-size: 64px;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .logo img {
+            width: 100%;
             height: 100%;
+            object-fit: fill; /* Zooms the image to fit the container */
+            border-radius: 8px;
+            transition: transform 0.3s ease; /* Smooth zoom transition */
+        }
+
+        .logo img:hover {
+            transform: scale(1.2); /* Zooms in when hovered */
         }
 
         .title {
@@ -169,6 +175,41 @@
             font-size: 0.9rem;
         }
 
+        .tutorials {
+            margin-top: 4rem;
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 24px;
+        }
+
+        .tutorials h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .tutorial-videos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .tutorial-video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+
+        .tutorial-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
         @media (max-width: 768px) {
             .download-section {
                 grid-template-columns: 1fr;
@@ -178,6 +219,10 @@
             .download-info {
                 padding-right: 0;
             }
+
+            .tutorial-videos {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -185,7 +230,7 @@
     <div class="container">
         <header class="header">
             <div class="logo">
-                <i class="fas fa-search"></i>
+                <img src="img/logo.png" alt="Logo" />
             </div>
             <h1 class="title">Complete MSR Search</h1>
             <p class="subtitle">Automate Your Microsoft Rewards Searches</p>
@@ -203,15 +248,15 @@
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Points tracking dashboard</span>
+                        <span>Human like search behaviour</span>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Customizable search patterns</span>
+                        <span>Supports desktop searches in mobile</span>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-check-circle"></i>
-                        <span>Progress notifications</span>
+                        <span>Supports mobile searches in desktop</span>
                     </div>
                 </div>
 
@@ -222,25 +267,20 @@
             </div>
             
             <div class="preview">
-                <img src="/api/placeholder/600/400" alt="Extension Preview">
+                <img src="img/ext.png" alt="Extension Preview">
             </div>
         </main>
 
-        <section class="screenshots">
-            <div class="screenshot">
-                <img src="/api/placeholder/400/300" alt="Dashboard Screenshot">
-                <h3 class="screenshot-title">Intuitive Dashboard</h3>
-                <p class="screenshot-desc">Track your points and search progress in real-time with our clean, user-friendly interface.</p>
-            </div>
-            <div class="screenshot">
-                <img src="/api/placeholder/400/300" alt="Settings Screenshot">
-                <h3 class="screenshot-title">Customizable Settings</h3>
-                <p class="screenshot-desc">Configure search patterns, speed, and automation preferences to match your needs.</p>
-            </div>
-            <div class="screenshot">
-                <img src="/api/placeholder/400/300" alt="Automation Screenshot">
-                <h3 class="screenshot-title">Smart Automation</h3>
-                <p class="screenshot-desc">Let the extension handle your daily searches while you focus on other tasks.</p>
+
+        <section class="tutorials">
+            <h2>Installation Tutorials</h2>
+            <div class="tutorial-videos">
+                <div class="tutorial-video">
+                    <iframe src="https://www.youtube.com/embed/CHROME_VIDEO_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="tutorial-video">
+                    <iframe src="https://www.youtube.com/embed/EDGE_VIDEO_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
     </div>
