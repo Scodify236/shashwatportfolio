@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete MSR Search - Extension Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00ffbb;
+            --background: #0a0a0a;
+            --surface: #1a1a1a;
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent: #ff3366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .logo {
+            width: 128px;
+            height: 128px;
+            margin: 0 auto 1rem;
+            background: var(--surface);
+            border-radius: 24px;
+            padding: 1rem;
+            border: 2px solid var(--primary);
+        }
+
+        .logo i {
+            font-size: 64px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .download-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 24px;
+            margin-bottom: 4rem;
+        }
+
+        .download-info {
+            padding-right: 2rem;
+        }
+
+        .download-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .features {
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-item i {
+            color: var(--primary);
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: var(--background);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .preview {
+            position: relative;
+        }
+
+        .preview img {
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid var(--primary);
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .screenshot {
+            background: var(--surface);
+            padding: 1rem;
+            border-radius: 12px;
+        }
+
+        .screenshot img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .screenshot-title {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .screenshot-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .download-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .download-info {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-search"></i>
+            </div>
+            <h1 class="title">Complete MSR Search</h1>
+            <p class="subtitle">Automate Your Microsoft Rewards Searches</p>
+        </header>
+
+        <main class="download-section">
+            <div class="download-info">
+                <h2 class="download-title">Download for Chrome</h2>
+                <p>Streamline your Microsoft Rewards experience with automated searches and point tracking.</p>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Automatic search completion</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Points tracking dashboard</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Customizable search patterns</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Progress notifications</span>
+                    </div>
+                </div>
+
+                <a href="#" class="download-button">
+                    <i class="fas fa-download"></i>
+                    Add to Chrome
+                </a>
+            </div>
+            
+            <div class="preview">
+                <img src="/api/placeholder/600/400" alt="Extension Preview">
+            </div>
+        </main>
+
+        <section class="screenshots">
+            <div class="screenshot">
+                <img src="/api/placeholder/400/300" alt="Dashboard Screenshot">
+                <h3 class="screenshot-title">Intuitive Dashboard</h3>
+                <p class="screenshot-desc">Track your points and search progress in real-time with our clean, user-friendly interface.</p>
+            </div>
+            <div class="screenshot">
+                <img src="/api/placeholder/400/300" alt="Settings Screenshot">
+                <h3 class="screenshot-title">Customizable Settings</h3>
+                <p class="screenshot-desc">Configure search patterns, speed, and automation preferences to match your needs.</p>
+            </div>
+            <div class="screenshot">
+                <img src="/api/placeholder/400/300" alt="Automation Screenshot">
+                <h3 class="screenshot-title">Smart Automation</h3>
+                <p class="screenshot-desc">Let the extension handle your daily searches while you focus on other tasks.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
