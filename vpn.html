@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trishul VPN - Extension Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --background: #0a0a0a;
+            --surface: #1a1a1a;
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent: #2196F3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .logo {
+            width: 128px;
+            height: 128px;
+            margin: 0 auto 1rem;
+            background: var(--surface);
+            border-radius: 24px;
+            border: 2px solid var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.2);
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .download-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 24px;
+            margin-bottom: 4rem;
+        }
+
+        .download-info {
+            padding-right: 2rem;
+        }
+
+        .download-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .features {
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-item i {
+            color: var(--primary);
+        }
+
+        .download-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: var(--background);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .download-button.secondary {
+            background: var(--accent);
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .preview {
+            position: relative;
+        }
+
+        .preview img {
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid var(--primary);
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .screenshot {
+            background: var(--surface);
+            padding: 1rem;
+            border-radius: 12px;
+        }
+
+        .screenshot img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .screenshot-title {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .screenshot-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .tutorials {
+            margin-top: 4rem;
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 24px;
+        }
+
+        .tutorials h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .tutorial-video {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 56.25%;
+        }
+
+        .tutorial-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .download-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .download-info {
+                padding-right: 0;
+            }
+
+            .download-options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="img/icon18.png" alt="Trishul VPN Logo" />
+            </div>
+            <h1 class="title">Trishul VPN</h1>
+            <p class="subtitle">Secure, Fast, and Reliable VPN Service</p>
+        </header>
+
+        <main class="download-section">
+            <div class="download-info">
+                <h2 class="download-title">Download Trishul VPN</h2>
+                <p>Experience unrestricted internet access with our high-speed VPN service.</p>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Military-grade encryption</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Lightning-fast servers</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-ban"></i>
+                        <span>Strict no-logs policy</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Global server network</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Anonymous browsing</span>
+                    </div>
+                </div>
+
+                <div class="download-options">
+                    <a href="Trishul_VPN.zip" class="download-button">
+                        <i class="fas fa-download"></i>
+                        Download extension zip
+                    </a>
+                </div>
+            </div>
+            
+            <div class="preview">
+                <img src="img/vpn.png" alt="Trishul VPN Preview">
+            </div>
+        </main>
+
+        <div class="screenshots">
+            <div class="screenshot">
+                <img src="img/vpn1.png" alt="Server Selection">
+                <h3 class="screenshot-title">Worldwide Server Network</h3>
+                <p class="screenshot-desc">Access our high-speed servers located in multiple countries for the best browsing experience.</p>
+            </div>
+        </div>
+
+        <section class="tutorials">
+            <h2>How to Install Trishul VPN process will be same as in this video.</h2>
+            <div class="tutorial-video">
+                <iframe src="https://www.youtube.com/embed/NDxqHx4nhIs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
